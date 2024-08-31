@@ -3,18 +3,20 @@ import { useState } from 'react'
 import './App.css'
 import { ThemeProvider } from './Contexts/Theme'
 import { useEffect } from 'react'
+import ThemeBtn from './component/ThemeBtn'
+import Card from './component/Card'
 
 
 function App() {
 
-    const [theme , settheme] = useState("light")
+    const [themeMode , setthemeMode] = useState("light")
 
     const lightmode=()=>{
-        settheme("light")
+        setthemeMode("light")
     }
 
     const darkmode=()=>{
-        settheme("dark")
+        setthemeMode("dark")
     }
 
     //actual change in theme 
