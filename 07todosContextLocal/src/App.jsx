@@ -1,9 +1,13 @@
 import './App.css'
+import './index.css'
 
 function App() {
 
   return (
-    <>To Do List</>
+    
+    <h1 className='text-3xl '
+    >To Do List</h1>
+    
   )
 }
 
