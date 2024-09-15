@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect , useState } from 'react';
 import './App.css'
 import { TodoProvider } from './Contexts/TodoContext'
 import './index.css'
@@ -7,7 +7,7 @@ import TodoItem from './Components/TodoItem';
 
 function App() {
 
-  const [todos, setTodos] = useState([{}]);
+  const [todos, setTodos] = useState([]);
 
   const addTodo =(todo)=>{
     setTodos((prev)=>{[{id: Date.now(), ...todo},...prev]})
@@ -48,12 +48,12 @@ function App() {
         </div>
         <div className="flex flex-wrap gap-y-3">
             {/*Loop and Add TodoItem here */}
-            {todos.map((todo)=>(
-              <div key={todo.id}
-              className='w-full'
-              >
-                <TodoItem todo={todo} />
-              </div>
+            {todos.map((todo) => (
+                <div key={todo.id}
+                className='w-full'
+                >
+                  <TodoItem todo={todo} />
+                </div>
             ))}
         </div>
     </div>
