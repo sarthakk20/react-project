@@ -12,6 +12,8 @@ const editTodo=()=>{
 }
 
 const toggleCompleted = ()=>{
+    console.log(todo.id);
+    
     toggleTodo(todo.id)
 }
 

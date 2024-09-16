@@ -23,12 +23,13 @@ function App() {
 
   const toggleTodo = (id) =>{
     setTodos((prev)=> prev.map((prevId)=> prevId.id === id ? {...prevId, completed: !prevId.completed} : prevId))
-
   }
 
   useEffect(()=>{
     const todos = JSON.parse(localStorage.getItem("todos"))
-    if(todos && todos.lenght > 0) setTodos(todos);
+    if(todos && todos.length > 0){
+      setTodos(todos);
+    }
 
   },[])
 
@@ -49,12 +50,19 @@ function App() {
         <div className="flex flex-wrap gap-y-3">
             {/*Loop and Add TodoItem here */}
             {todos.map((todo) => (
-                <div key={todo.id}
-                className='w-full'
-                >
-                  <TodoItem todo={todo} />
-                </div>
-            ))}
+                          <div key={todo.id}
+                          className='w-full'
+                          >
+                            <TodoItem todo={todo} />
+                          </div>
+                        ))}
+            {/* {todos.forEach((todo)=>(
+              <div key={todo.id}
+              className='w-full'
+              >
+                <TodoItem todo={todo} />
+              </div>
+            ))} */}
         </div>
     </div>
     </div>
