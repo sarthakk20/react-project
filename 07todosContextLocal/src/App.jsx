@@ -55,7 +55,7 @@ function App() {
                           >
                             <TodoItem todo={todo} />
                           </div>
-                        ))}
+            ))}
             {/* {todos.forEach((todo)=>(
               <div key={todo.id}
               className='w-full'
