@@ -10,4 +10,4 @@ export const store = configureStore({
 //store
 //reducer
 //useSelector
-//useDispatch - dispatch ye reduer ko use krke store me value add krta he
+//useDispatch - dispatch ye reducer ko use krke store me value add krta he
